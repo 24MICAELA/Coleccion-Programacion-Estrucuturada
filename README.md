@@ -50,19 +50,24 @@ Propuesta de Solución:
 
 a. Constitución de una estructura
 
+```
 struct Estudiante {
     char nombre[50];
     int edad;
     float promedio;
 };
+```
+
 b. Instanciación de estructuras
 
+```
 struct Estudiante estudiante1;
 strcpy(estudiante1.nombre, "Juan");
 estudiante1.edad = 20;
 estudiante1.promedio = 9.5;
+```
 c. Instanciación con el operador malloc
-
+```
 struct Estudiante *estudiante2 = (struct Estudiante *) malloc(sizeof(struct Estudiante));
 strcpy(estudiante2->nombre, "Ana");
 estudiante2->edad = 22;
@@ -71,9 +76,10 @@ d. Punteros y estructuras
 
 struct Estudiante *punteroEst = &estudiante1;
 printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", punteroEst->nombre, punteroEst->edad, punteroEst->promedio);
+```
 2. Uniones
 
-
+```
 union Dato {
    int i;
    float f;
@@ -90,11 +96,12 @@ printf("dato.f: %.2f\n", dato.f);
 
 strcpy(dato.str, "C programming");
 printf("dato.str: %s\n", dato.str);
+```
 Nota: El valor de las uniones se sobrescribe, sólo se puede acceder a la última asignación.
 
 3. Copia de estructuras
 
-
+```
 struct Estudiante copiarEstudiante(struct Estudiante est) {
     struct Estudiante nuevoEst;
     strcpy(nuevoEst.nombre, est.nombre);
@@ -102,33 +109,38 @@ struct Estudiante copiarEstudiante(struct Estudiante est) {
     nuevoEst.promedio = est.promedio;
     return nuevoEst;
 }
+```
 4. Creación de alias de tipos de estructuras
 
 
 typedef struct Estudiante Estudiante;
-
+```
 Estudiante estudiante3;
 strcpy(estudiante3.nombre, "Pedro");
 estudiante3.edad = 25;
 estudiante3.promedio = 9.7;
+```
 5. Estructuras y funciones
 
 a. Pasar una estructura por valor como argumento
-
+```
 void imprimirEstudiante(Estudiante est) {
     printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", est.nombre, est.edad, est.promedio);
 }
 imprimirEstudiante(estudiante1);
+```
 b. Pasar una estructura por referencia como argumento
-
+```
 void modificarEstudiante(Estudiante *est) {
     est->edad = 30;
 }
+```
 modificarEstudiante(&estudiante1);
 c. Pasar una estructura por dirección como argumento
-
+```
 void imprimirEstudiante2(Estudiante *est) {
     printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", est->nombre, est->edad, est->promedio);
 }
 imprimirEstudiante2(&estudiante1);
+```
 Nota: Por favor, verifica la sintaxis y asegúrate de que la compilación sea exitosa, ya que los códigos proporcionados son fragmentos y es posible que debas incluir bibliotecas apropiadas o definir main() para probarlos.
