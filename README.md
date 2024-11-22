@@ -1,5 +1,7 @@
 # Coleccion-Programacion-Estrucuturada
+
 https://github.com/24MICAELA/Coleccion-Programacion-Estrucuturada.git
+
 Enunciado
 Recuerda que estos ejercicios están diseñados para C, no para C++, por lo que no incluyen características específicas de C++ como el operador new o la programación orientada a objetos.
 
