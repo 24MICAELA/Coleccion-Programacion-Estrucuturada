@@ -1,15 +1,15 @@
+// funciones/funciones.h
 #ifndef FUNCIONES_H
 #define FUNCIONES_H
 
-#include "estudiante.h"
+// Definición de la unión Dato
+union Dato {
+    int i;
+    float f;
+    char str[20];
+};
 
-// Función para imprimir un estudiante
-void imprimirEstudiante(Estudiante est);
+// Funciones para manejar la unión
+void manejarUnion();
 
-// Función para modificar un estudiante
-void modificarEstudiante(Estudiante *est);
-
-// Función para imprimir un estudiante por dirección
-void imprimirEstudiantePorDireccion(Estudiante *est);
-
-#endif // FUNCIONES_H
+#endif

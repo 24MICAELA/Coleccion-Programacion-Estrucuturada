@@ -1,17 +1,17 @@
-#include <stdio.h>
+// funciones/funciones.c
 #include "funciones.h"
+#include <stdio.h>
+#include <string.h>
 
-// Función para imprimir un estudiante
-void imprimirEstudiante(Estudiante est) {
-    printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", est.nombre, est.edad, est.promedio);
-}
+void manejarUnion() {
+    union Dato dato;
 
-// Función para modificar un estudiante
-void modificarEstudiante(Estudiante *est) {
-    est->edad = 30;
-}
+    dato.i = 10;
+    printf("dato.i: %d\n", dato.i);
 
-// Función para imprimir un estudiante por dirección
-void imprimirEstudiantePorDireccion(Estudiante *est) {
-    printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", est->nombre, est->edad, est->promedio);
+    dato.f = 220.5;
+    printf("dato.f: %.2f\n", dato.f);
+
+    strcpy(dato.str, "C programming");
+    printf("dato.str: %s\n", dato.str);
 }

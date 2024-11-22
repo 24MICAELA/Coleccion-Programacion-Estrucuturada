@@ -1,17 +1,25 @@
+// estudiante/estudiante.h
 #ifndef ESTUDIANTE_H
 #define ESTUDIANTE_H
 
-// Definimos la estructura Estudiante
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+// Definición de la estructura Estudiante
 struct Estudiante {
     char nombre[50];
     int edad;
     float promedio;
 };
 
-// Usamos typedef para crear un alias para la estructura Estudiante
+// Definir alias para la estructura Estudiante
 typedef struct Estudiante Estudiante;
 
-// Función para copiar un estudiante
+// Funciones para trabajar con estudiantes
+void imprimirEstudiante(Estudiante est);
+void modificarEstudiante(Estudiante *est);
+void imprimirEstudiante2(Estudiante *est);
 Estudiante copiarEstudiante(Estudiante est);
 
-#endif // ESTUDIANTE_H
+#endif
